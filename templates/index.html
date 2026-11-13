@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ส่งข้อความ</title>
+</head>
+<body>
+    <main>
+        <h1>ส่งข้อความ</h1>
+        <form method="post">
+            <label for="message">ข้อความ</label>
+            <input id="message" name="message" type="text" required>
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+
+        {% if error %}
+        <p role="alert">{{ error }}</p>
+        {% endif %}
+
+        {% if message %}
+        <h2>ข้อความที่ได้รับ</h2>
+        <p>{{ message }}</p>
+        {% endif %}
+    </main>
+</body>
+</html>
